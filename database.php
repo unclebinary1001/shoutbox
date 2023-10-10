@@ -3,7 +3,12 @@
 //$con = mysqli_connect("localhost","root",'',"shoutit");
 
 //Remote database connection
-$con = mysqli_connect("remotemysql.com","NhQd82hxIE",'8aIOzEjsKx',"NhQd82hxIE");
+require_once 'config.php';
+$con = mysqli_connect($dbServerName, $dbUsername, $dbPassword, $dbName);
+
+if (!$con) {
+    die("Connection failed: ". myqli_connect_error());
+} 
 
 //Test
 if(mysqli_connect_errno()){
