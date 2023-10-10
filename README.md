@@ -12,3 +12,16 @@ I'm using a linux debian distro version 11
 - php -S localhost:8080 [You can user whatever port you want so long as that port is not being used by another process]
 ![Proof of installation](image.png)
 3. Start a php web server in the parent folder containing the index.php folder
+
+
+### Database Credentials
+Database log in credentials must be stored in a config.php file in the root folder following the template below:
+```
+<?php
+// Database Configuration
+$dbServerName = "";
+$dbUsername = "";
+$dbPassword = "";
+$dbName = "";
+?>
+```
